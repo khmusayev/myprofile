@@ -1,12 +1,20 @@
 package com.myprofile.service;
 
-import java.util.Set;
+import java.util.List;
+import java.util.Optional;
 
 import com.myprofile.entity.User;
-import com.myprofile.entity.UserRole;
 
 public interface UserService {
 	
-	User createUser(User user, Set<UserRole> userRoles) throws Exception;
+	User createUser(User user) throws Exception;
+
+	List<User> findAll();
+
+	Optional<User> findById(long theId);
+
+	void save(User theEmployee);
+
+	void delete(long theId);
 	
 }
