@@ -1,58 +1,33 @@
 package com.myprofile.service.impl;
 
 import java.util.List;
-import java.util.Optional;
-import java.util.Set;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.myprofile.entity.User;
-import com.myprofile.repository.UserRepository;
-import com.myprofile.service.UserService;
+import com.myprofile.entity.UserJob;
+import com.myprofile.repository.UserJobRepository;
+import com.myprofile.service.UserJobService;
 
 @Service
-public class UserJobServiceImpl implements UserService {
-
-	private static final Logger LOG = LoggerFactory.getLogger(UserService.class);
+public class UserJobServiceImpl implements UserJobService {
 
 	@Autowired
-	private UserRepository userRepository;
+	private UserJobRepository userJobRepository;
 
 	@Override
-	public User createUser(User user) throws Exception {
-		User localUser = userRepository.findByUsername(user.getUsername());
-
-		if (localUser != null) {
-			LOG.info("user {} already exists. Nothing will be done.", user.getUsername());
-		} else {
-
-			localUser = userRepository.save(user);
-		}
-
-		return localUser;
+	public List<UserJob> findAll(int userId) {
+		return userJobRepository.findByUserId(userId);
 	}
 
 	@Override
-	public List<User> findAll() {
-		return (List<User>) userRepository.findAll();
-	}
-	
-	@Override
-	public Optional<User> findById(long theId) {
-		return userRepository.findById(theId);
-	}
-	
-	@Override
-	public void save(User theEmployee) {
-		userRepository.save(theEmployee);
+	public void save(UserJob theJob) {
+		userJobRepository.save(theJob);
 	}
 
 	@Override
-	public void delete(long theId) {
-		userRepository.deleteById(theId);
+	public void delete(UserJob userJob) {
+		userJobRepository.delete(userJob);
 	}
 
 }
