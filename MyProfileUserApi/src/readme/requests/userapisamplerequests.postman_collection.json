@@ -1,0 +1,320 @@
+{
+	"id": "97af8629-de37-4329-9a25-5f88498b0185",
+	"name": "userapisamplerequests",
+	"description": null,
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [
+		"7dcb1500-b297-4480-8b67-cbddb3d5e837",
+		"b1f608da-c068-45d3-8405-597daa2b4376",
+		"c6dfd43e-9a1d-485d-8e71-0ef4f41371b3",
+		"bfe0d633-9e36-4dca-9745-8e780ac1c05c",
+		"d1c7808a-474a-459a-9b85-ea70a10d2353",
+		"2cee3f90-fa52-4f3d-b19b-d6a3cb88e54a",
+		"2f12f832-df89-420b-a04c-ce4813427150",
+		"a15200d0-324f-41eb-a1f7-26ff62aad779",
+		"e7519054-05b5-4816-b67e-774ba6f75d26",
+		"603b55d9-a186-40dd-9847-a06943964645",
+		"b7815f0a-be9e-4a83-977e-ec4b80092664"
+	],
+	"folders_order": [],
+	"folders": [],
+	"requests": [
+		{
+			"id": "2cee3f90-fa52-4f3d-b19b-d6a3cb88e54a",
+			"name": "http://localhost:8082/userapi/users",
+			"url": "http://localhost:8082/userapi/users",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "PUT",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n        \"id\": 1,\n        \"username\": \"khmu\",\n        \"password\": \"pass\",\n        \"firstName\": \"kh\",\n        \"lastName\": \"mu\",\n        \"email\": \"km@gmail.com\"\n    }\n",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "2f12f832-df89-420b-a04c-ce4813427150",
+			"name": "http://localhost:8082/userapi/users",
+			"url": "http://localhost:8082/userapi/users",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"rawModeData": "{\n\"firstName\":\"kh\",\n\"lastName\":\"mu\",\n\"username\":\"khmu\",\n\"password\":\"pass\",\n\"email\":\"khmu@gmail.com\"\n}\n",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "603b55d9-a186-40dd-9847-a06943964645",
+			"name": "http://localhost:8082/userapi/users",
+			"url": "http://localhost:8082/userapi/users",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n\"firstName\":\"ni\",\n\"lastName\":\"ag\",\n\"username\":\"niag\",\n\"password\":\"pass\",\n\"email\":\"niag@gmail.com\"\n}\n",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "7dcb1500-b297-4480-8b67-cbddb3d5e837",
+			"name": "http://localhost:8082/userapi/users/1/studies",
+			"url": "http://localhost:8082/userapi/users/1/studies",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n\t\"startDate\":\"01.01.2012\",\n\t\"endDate\":\"01.01.2014\",\n\t\"university\":\"Uni1\",\n\t\"faculty\":\"fac1\",\n\t\"degree\":\"BSC\",\n\t\"courseDescription\":\"course desc 1\"\n}\n",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "a15200d0-324f-41eb-a1f7-26ff62aad779",
+			"name": "http://localhost:8082/userapi/users/2",
+			"url": "http://localhost:8082/userapi/users/2",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"rawModeData": "{\n\"firstName\":\"kh\",\n\"lastName\":\"mu\",\n\"username\":\"khmu\",\n\"password\":\"pass\",\n\"email\":\"khmu@gmail.com\"\n}\n",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "b1f608da-c068-45d3-8405-597daa2b4376",
+			"name": "http://localhost:8082/userapi/users/1/studies",
+			"url": "http://localhost:8082/userapi/users/1/studies",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n\t\"startDate\":\"01.01.2012\",\n\t\"endDate\":\"01.01.2014\",\n\t\"university\":\"Uni1\",\n\t\"faculty\":\"fac1\",\n\t\"degree\":\"BSC\";\n\t\"courseDescription\":\"course desc 1\"\n}\n",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "b7815f0a-be9e-4a83-977e-ec4b80092664",
+			"name": "http://localhost:8082/userapi/users",
+			"url": "http://localhost:8082/userapi/users",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n\"firstName\":\"kh\",\n\"lastName\":\"mu\",\n\"username\":\"khmu\",\n\"password\":\"pass\",\n\"email\":\"khmu@gmail.com\"\n}\n",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "bfe0d633-9e36-4dca-9745-8e780ac1c05c",
+			"name": "http://localhost:8082/userapi/users/3",
+			"url": "http://localhost:8082/userapi/users/3",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n        \"username\": \"dsa\",\n        \"password\": \"dsdf\",\n        \"firstName\": \"fdsd\",\n        \"lastName\": \"dsds\",\n        \"email\": \"dads@gmail.com\"\n    }\n",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "c6dfd43e-9a1d-485d-8e71-0ef4f41371b3",
+			"name": "http://localhost:8082/userapi/users/1/studies",
+			"url": "http://localhost:8082/userapi/users/1/studies",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n\t\"startDate\":\"01.01.2012\",\n\t\"endDate\":\"01.01.2014\",\n\t\"university\":\"Uni1\",\n\t\"faculty\":\"fac1\",\n\t\"degree\":\"BSC\";\n\t\"courseDescription\":\"course desc 1\"\n\t\n}\n",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "d1c7808a-474a-459a-9b85-ea70a10d2353",
+			"name": "http://localhost:8082/userapi/users",
+			"url": "http://localhost:8082/userapi/users",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n        \"username\": \"dsa\",\n        \"password\": \"dsdf\",\n        \"firstName\": \"fdsd\",\n        \"lastName\": \"dsds\",\n        \"email\": \"dads@gmail.com\"\n    }\n",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "e7519054-05b5-4816-b67e-774ba6f75d26",
+			"name": "http://localhost:8082/userapi/users/1",
+			"url": "http://localhost:8082/userapi/users/1",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"rawModeData": "{\n\"firstName\":\"kh\",\n\"lastName\":\"mu\",\n\"username\":\"khmu\",\n\"password\":\"pass\",\n\"email\":\"khmu@gmail.com\"\n}\n",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"pathVariables": {}
+		}
+	]
+}
