@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -31,6 +32,18 @@ public class UserJob {
 	
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
+	@JsonIgnore
     private User user;
-	
+
+	@Override
+	public String toString() {
+		return "UserJob{" +
+				"id=" + id +
+				", startDate='" + startDate + '\'' +
+				", endDate='" + endDate + '\'' +
+				", company='" + company + '\'' +
+				", position='" + position + '\'' +
+				", jobDescription='" + jobDescription + '\'' +
+				'}';
+	}
 }

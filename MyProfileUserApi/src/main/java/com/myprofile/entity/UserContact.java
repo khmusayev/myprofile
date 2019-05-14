@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -28,6 +29,16 @@ public class UserContact {
 	
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
+	@JsonIgnore
     private User user;
-	
+
+	@Override
+	public String toString() {
+		return "UserContact{" +
+				"id=" + id +
+				", address='" + address + '\'' +
+				", email='" + email + '\'' +
+				", phone='" + phone + '\'' +
+				'}';
+	}
 }

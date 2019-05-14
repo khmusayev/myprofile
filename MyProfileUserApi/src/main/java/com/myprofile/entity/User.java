@@ -1,28 +1,25 @@
 package com.myprofile.entity;
 
-import java.util.HashSet;
-import java.util.Set;
-
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
+
+//@NamedEntityGraph(
+//		name="user-entity-graph",
+//		attributeNodes = {
+//				@NamedAttributeNode("userEdus")
+//		}
+//)
 @Entity
 @NoArgsConstructor
 @Getter @Setter
+@ToString
 public class User {
 	
 	@Id
@@ -37,15 +34,12 @@ public class User {
 	private String email;
 	
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	@JsonIgnore
 	private Set<UserJob> userJobs = new HashSet<>();
 	
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	@JsonIgnore
-	private Set<UserJob> userEdus = new HashSet<>();
+	private Set<UserEducation> userEdus = new HashSet<>();
 	
 	@OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	@JsonIgnore
     private UserContact userContact;
 	
 	public void setUserContact(UserContact contact) {

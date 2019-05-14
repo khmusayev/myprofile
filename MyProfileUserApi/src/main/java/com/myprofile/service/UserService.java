@@ -12,6 +12,7 @@ public interface UserService {
 	List<User> findAll();
 
 	Optional<User> findById(long theId);
+	User findByUsername(String username);
 
 	void save(User theEmployee);
 

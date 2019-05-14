@@ -1,320 +1,484 @@
 {
-	"id": "97af8629-de37-4329-9a25-5f88498b0185",
-	"name": "userapisamplerequests",
-	"description": null,
-	"auth": null,
-	"events": null,
-	"variables": [],
-	"order": [
-		"7dcb1500-b297-4480-8b67-cbddb3d5e837",
-		"b1f608da-c068-45d3-8405-597daa2b4376",
-		"c6dfd43e-9a1d-485d-8e71-0ef4f41371b3",
-		"bfe0d633-9e36-4dca-9745-8e780ac1c05c",
-		"d1c7808a-474a-459a-9b85-ea70a10d2353",
-		"2cee3f90-fa52-4f3d-b19b-d6a3cb88e54a",
-		"2f12f832-df89-420b-a04c-ce4813427150",
-		"a15200d0-324f-41eb-a1f7-26ff62aad779",
-		"e7519054-05b5-4816-b67e-774ba6f75d26",
-		"603b55d9-a186-40dd-9847-a06943964645",
-		"b7815f0a-be9e-4a83-977e-ec4b80092664"
-	],
-	"folders_order": [],
-	"folders": [],
-	"requests": [
+	"info": {
+		"_postman_id": "0b78d8cc-45f5-4e7e-8d3f-e6a54fd63a5a",
+		"name": "userapisamplerequests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
 		{
-			"id": "2cee3f90-fa52-4f3d-b19b-d6a3cb88e54a",
-			"name": "http://localhost:8082/userapi/users",
-			"url": "http://localhost:8082/userapi/users",
-			"description": "",
-			"data": [],
-			"dataMode": "raw",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"name": "Content-Type",
-					"value": "application/json",
-					"description": "",
-					"type": "text"
-				}
-			],
-			"method": "PUT",
-			"pathVariableData": [],
-			"queryParams": [],
-			"auth": null,
-			"events": null,
-			"folder": null,
-			"rawModeData": "{\n        \"id\": 1,\n        \"username\": \"khmu\",\n        \"password\": \"pass\",\n        \"firstName\": \"kh\",\n        \"lastName\": \"mu\",\n        \"email\": \"km@gmail.com\"\n    }\n",
-			"headers": "Content-Type: application/json\n",
-			"pathVariables": {}
-		},
-		{
-			"id": "2f12f832-df89-420b-a04c-ce4813427150",
-			"name": "http://localhost:8082/userapi/users",
-			"url": "http://localhost:8082/userapi/users",
-			"description": "",
-			"data": [],
-			"dataMode": "raw",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"name": "Content-Type",
-					"value": "application/x-www-form-urlencoded",
-					"description": "",
-					"type": "text"
-				}
-			],
-			"method": "GET",
-			"pathVariableData": [],
-			"queryParams": [],
-			"auth": null,
-			"events": null,
-			"folder": null,
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"rawModeData": "{\n\"firstName\":\"kh\",\n\"lastName\":\"mu\",\n\"username\":\"khmu\",\n\"password\":\"pass\",\n\"email\":\"khmu@gmail.com\"\n}\n",
-			"headers": "Content-Type: application/x-www-form-urlencoded\n",
-			"pathVariables": {}
-		},
-		{
-			"id": "603b55d9-a186-40dd-9847-a06943964645",
-			"name": "http://localhost:8082/userapi/users",
-			"url": "http://localhost:8082/userapi/users",
-			"description": "",
-			"data": [],
-			"dataMode": "raw",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"name": "Content-Type",
-					"value": "application/json",
-					"description": "",
-					"type": "text"
-				}
-			],
-			"method": "POST",
-			"pathVariableData": [],
-			"queryParams": [],
-			"auth": null,
-			"events": null,
-			"folder": null,
-			"rawModeData": "{\n\"firstName\":\"ni\",\n\"lastName\":\"ag\",\n\"username\":\"niag\",\n\"password\":\"pass\",\n\"email\":\"niag@gmail.com\"\n}\n",
-			"headers": "Content-Type: application/json\n",
-			"pathVariables": {}
-		},
-		{
-			"id": "7dcb1500-b297-4480-8b67-cbddb3d5e837",
+			"_postman_id": "32307c39-a310-4b52-8142-b84af58e7cec",
 			"name": "http://localhost:8082/userapi/users/1/studies",
-			"url": "http://localhost:8082/userapi/users/1/studies",
-			"description": "",
-			"data": [],
-			"dataMode": "raw",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"name": "Content-Type",
-					"value": "application/json",
-					"description": "",
-					"type": "text"
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"startDate\":\"01.01.2012\",\n\t\"endDate\":\"01.01.2014\",\n\t\"university\":\"Uni1\",\n\t\"faculty\":\"fac1\",\n\t\"degree\":\"BSC\",\n\t\"courseDescription\":\"course desc 1\"\n}\n"
+				},
+				"url": {
+					"raw": "http://localhost:8082/userapi/users/2/studies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"userapi",
+						"users",
+						"2",
+						"studies"
+					]
 				}
-			],
-			"method": "POST",
-			"pathVariableData": [],
-			"queryParams": [],
-			"auth": null,
-			"events": null,
-			"folder": null,
-			"rawModeData": "{\n\t\"startDate\":\"01.01.2012\",\n\t\"endDate\":\"01.01.2014\",\n\t\"university\":\"Uni1\",\n\t\"faculty\":\"fac1\",\n\t\"degree\":\"BSC\",\n\t\"courseDescription\":\"course desc 1\"\n}\n",
-			"headers": "Content-Type: application/json\n",
-			"pathVariables": {}
-		},
-		{
-			"id": "a15200d0-324f-41eb-a1f7-26ff62aad779",
-			"name": "http://localhost:8082/userapi/users/2",
-			"url": "http://localhost:8082/userapi/users/2",
-			"description": "",
-			"data": [],
-			"dataMode": "raw",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"name": "Content-Type",
-					"value": "application/x-www-form-urlencoded",
-					"description": "",
-					"type": "text"
-				}
-			],
-			"method": "GET",
-			"pathVariableData": [],
-			"queryParams": [],
-			"auth": null,
-			"events": null,
-			"folder": null,
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
 			},
-			"rawModeData": "{\n\"firstName\":\"kh\",\n\"lastName\":\"mu\",\n\"username\":\"khmu\",\n\"password\":\"pass\",\n\"email\":\"khmu@gmail.com\"\n}\n",
-			"headers": "Content-Type: application/x-www-form-urlencoded\n",
-			"pathVariables": {}
+			"response": []
 		},
 		{
-			"id": "b1f608da-c068-45d3-8405-597daa2b4376",
+			"_postman_id": "45144553-8c92-4c45-ae92-df77fe6a5e08",
 			"name": "http://localhost:8082/userapi/users/1/studies",
-			"url": "http://localhost:8082/userapi/users/1/studies",
-			"description": "",
-			"data": [],
-			"dataMode": "raw",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"name": "Content-Type",
-					"value": "application/json",
-					"description": "",
-					"type": "text"
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"startDate\":\"01.01.2012\",\n\t\"endDate\":\"01.01.2014\",\n\t\"university\":\"Uni1\",\n\t\"faculty\":\"fac1\",\n\t\"degree\":\"BSC\",\n\t\"courseDescription\":\"course desc 1\"\n}\n"
+				},
+				"url": {
+					"raw": "http://localhost:8082/userapi/users/2/studies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"userapi",
+						"users",
+						"2",
+						"studies"
+					]
 				}
-			],
-			"method": "POST",
-			"pathVariableData": [],
-			"queryParams": [],
-			"auth": null,
-			"events": null,
-			"folder": null,
-			"rawModeData": "{\n\t\"startDate\":\"01.01.2012\",\n\t\"endDate\":\"01.01.2014\",\n\t\"university\":\"Uni1\",\n\t\"faculty\":\"fac1\",\n\t\"degree\":\"BSC\";\n\t\"courseDescription\":\"course desc 1\"\n}\n",
-			"headers": "Content-Type: application/json\n",
-			"pathVariables": {}
+			},
+			"response": []
 		},
 		{
-			"id": "b7815f0a-be9e-4a83-977e-ec4b80092664",
-			"name": "http://localhost:8082/userapi/users",
-			"url": "http://localhost:8082/userapi/users",
-			"description": "",
-			"data": [],
-			"dataMode": "raw",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"name": "Content-Type",
-					"value": "application/json",
-					"description": "",
-					"type": "text"
+			"_postman_id": "485c4edb-4df0-4d71-a6cc-fe7b92eea3f1",
+			"name": "http://localhost:8082/userapi/users/1/studies",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"startDate\":\"01.01.2012\",\n\t\"endDate\":\"01.01.2014\",\n\t\"university\":\"Uni1\",\n\t\"faculty\":\"fac1\",\n\t\"degree\":\"BSC\",\n\t\"courseDescription\":\"course desc 1\"\n\t\n}\n"
+				},
+				"url": {
+					"raw": "http://localhost:8082/userapi/users/1/studies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"userapi",
+						"users",
+						"1",
+						"studies"
+					]
 				}
-			],
-			"method": "POST",
-			"pathVariableData": [],
-			"queryParams": [],
-			"auth": null,
-			"events": null,
-			"folder": null,
-			"rawModeData": "{\n\"firstName\":\"kh\",\n\"lastName\":\"mu\",\n\"username\":\"khmu\",\n\"password\":\"pass\",\n\"email\":\"khmu@gmail.com\"\n}\n",
-			"headers": "Content-Type: application/json\n",
-			"pathVariables": {}
+			},
+			"response": []
 		},
 		{
-			"id": "bfe0d633-9e36-4dca-9745-8e780ac1c05c",
+			"_postman_id": "46b40896-7699-48f2-ab82-080c8ba53a53",
 			"name": "http://localhost:8082/userapi/users/3",
-			"url": "http://localhost:8082/userapi/users/3",
-			"description": "",
-			"data": [],
-			"dataMode": "raw",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"name": "Content-Type",
-					"value": "application/json",
-					"description": "",
-					"type": "text"
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"username\": \"dsa\",\n        \"password\": \"dsdf\",\n        \"firstName\": \"fdsd\",\n        \"lastName\": \"dsds\",\n        \"email\": \"dads@gmail.com\"\n    }\n"
+				},
+				"url": {
+					"raw": "http://localhost:8082/userapi/users/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"userapi",
+						"users",
+						"3"
+					]
 				}
-			],
-			"method": "DELETE",
-			"pathVariableData": [],
-			"queryParams": [],
-			"auth": null,
-			"events": null,
-			"folder": null,
-			"rawModeData": "{\n        \"username\": \"dsa\",\n        \"password\": \"dsdf\",\n        \"firstName\": \"fdsd\",\n        \"lastName\": \"dsds\",\n        \"email\": \"dads@gmail.com\"\n    }\n",
-			"headers": "Content-Type: application/json\n",
-			"pathVariables": {}
-		},
-		{
-			"id": "c6dfd43e-9a1d-485d-8e71-0ef4f41371b3",
-			"name": "http://localhost:8082/userapi/users/1/studies",
-			"url": "http://localhost:8082/userapi/users/1/studies",
-			"description": "",
-			"data": [],
-			"dataMode": "raw",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"name": "Content-Type",
-					"value": "application/json",
-					"description": "",
-					"type": "text"
-				}
-			],
-			"method": "POST",
-			"pathVariableData": [],
-			"queryParams": [],
-			"auth": null,
-			"events": null,
-			"folder": null,
-			"rawModeData": "{\n\t\"startDate\":\"01.01.2012\",\n\t\"endDate\":\"01.01.2014\",\n\t\"university\":\"Uni1\",\n\t\"faculty\":\"fac1\",\n\t\"degree\":\"BSC\";\n\t\"courseDescription\":\"course desc 1\"\n\t\n}\n",
-			"headers": "Content-Type: application/json\n",
-			"pathVariables": {}
-		},
-		{
-			"id": "d1c7808a-474a-459a-9b85-ea70a10d2353",
-			"name": "http://localhost:8082/userapi/users",
-			"url": "http://localhost:8082/userapi/users",
-			"description": "",
-			"data": [],
-			"dataMode": "raw",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"name": "Content-Type",
-					"value": "application/json",
-					"description": "",
-					"type": "text"
-				}
-			],
-			"method": "POST",
-			"pathVariableData": [],
-			"queryParams": [],
-			"auth": null,
-			"events": null,
-			"folder": null,
-			"rawModeData": "{\n        \"username\": \"dsa\",\n        \"password\": \"dsdf\",\n        \"firstName\": \"fdsd\",\n        \"lastName\": \"dsds\",\n        \"email\": \"dads@gmail.com\"\n    }\n",
-			"headers": "Content-Type: application/json\n",
-			"pathVariables": {}
-		},
-		{
-			"id": "e7519054-05b5-4816-b67e-774ba6f75d26",
-			"name": "http://localhost:8082/userapi/users/1",
-			"url": "http://localhost:8082/userapi/users/1",
-			"description": "",
-			"data": [],
-			"dataMode": "raw",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"name": "Content-Type",
-					"value": "application/x-www-form-urlencoded",
-					"description": "",
-					"type": "text"
-				}
-			],
-			"method": "GET",
-			"pathVariableData": [],
-			"queryParams": [],
-			"auth": null,
-			"events": null,
-			"folder": null,
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
 			},
-			"rawModeData": "{\n\"firstName\":\"kh\",\n\"lastName\":\"mu\",\n\"username\":\"khmu\",\n\"password\":\"pass\",\n\"email\":\"khmu@gmail.com\"\n}\n",
-			"headers": "Content-Type: application/x-www-form-urlencoded\n",
-			"pathVariables": {}
+			"response": []
+		},
+		{
+			"_postman_id": "71d44344-ee27-4c71-b0e9-55fba1f276e0",
+			"name": "http://localhost:8082/userapi/users",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"username\": \"dsa\",\n        \"password\": \"dsdf\",\n        \"firstName\": \"fdsd\",\n        \"lastName\": \"dsds\",\n        \"email\": \"dads@gmail.com\"\n    }\n"
+				},
+				"url": {
+					"raw": "http://localhost:8082/userapi/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"userapi",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "64a46da7-2a42-4cc1-9c97-dbf26425a67f",
+			"name": "http://localhost:8082/userapi/users",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": 1,\n        \"username\": \"khmu\",\n        \"password\": \"pass\",\n        \"firstName\": \"kh\",\n        \"lastName\": \"mu\",\n        \"email\": \"km@gmail.com\"\n    }\n"
+				},
+				"url": {
+					"raw": "http://localhost:8082/userapi/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"userapi",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "2a16196d-69fd-4d91-a2a3-ac1707d5b8b5",
+			"name": "http://localhost:8082/userapi/users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"firstName\":\"kh\",\n\"lastName\":\"mu\",\n\"username\":\"khmu\",\n\"password\":\"pass\",\n\"email\":\"khmu@gmail.com\"\n}\n"
+				},
+				"url": {
+					"raw": "http://localhost:8082/userapi/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"userapi",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "65a3f9ed-e10b-4061-80a3-19334d5dde8f",
+			"name": "http://localhost:8082/userapi/users/2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"firstName\":\"kh\",\n\"lastName\":\"mu\",\n\"username\":\"khmu\",\n\"password\":\"pass\",\n\"email\":\"khmu@gmail.com\"\n}\n"
+				},
+				"url": {
+					"raw": "http://localhost:8082/userapi/users/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"userapi",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "d0b76d92-9894-4c78-b1e0-e8b6e80db6f2",
+			"name": "http://localhost:8082/userapi/users/1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"firstName\":\"kh\",\n\"lastName\":\"mu\",\n\"username\":\"khmu\",\n\"password\":\"pass\",\n\"email\":\"khmu@gmail.com\"\n}\n"
+				},
+				"url": {
+					"raw": "http://localhost:8082/userapi/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"userapi",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "4ed01a49-c3b8-472b-9fea-2ca2a151db87",
+			"name": "http://localhost:8082/userapi/users",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"firstName\":\"ni\",\n\"lastName\":\"ag\",\n\"username\":\"niag\",\n\"password\":\"pass\",\n\"email\":\"niag@gmail.com\"\n}\n"
+				},
+				"url": {
+					"raw": "http://localhost:8082/userapi/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"userapi",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "955a59c2-d515-416b-bba6-b1321802a31c",
+			"name": "http://localhost:8082/userapi/users",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"firstName\":\"kh\",\n\"lastName\":\"mu\",\n\"username\":\"khmu\",\n\"password\":\"pass\",\n\"email\":\"khmu@gmail.com\"\n}\n"
+				},
+				"url": {
+					"raw": "http://localhost:8082/userapi/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"userapi",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "5325f6c7-ac41-455b-98b3-bf3166f4170b",
+			"name": "http://localhost:8082/userapi/users/2/jobs",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"startDate\":\"01.01.2012\",\n\t\"endDate\":\"01.01.2014\",\n\t\"company\":\"Company1\",\n\t\"position\":\"Software Developer\"\t\n}\n"
+				},
+				"url": {
+					"raw": "http://localhost:8082/userapi/users/2/jobs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"userapi",
+						"users",
+						"2",
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "6f131e97-a383-4e46-a607-480c2cf17b36",
+			"name": "http://localhost:8082/userapi/users/2/jobs",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"startDate\":\"01.01.2014\",\n\t\"endDate\":\"01.01.2018\",\n\t\"company\":\"Company2\",\n\t\"position\":\"Software Developer\"\t\n}\n"
+				},
+				"url": {
+					"raw": "http://localhost:8082/userapi/users/2/jobs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"userapi",
+						"users",
+						"2",
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "454950ee-5885-41b3-bb7c-5fbea92c8f8c",
+			"name": "http://localhost:8082/userapi/users/2/contact/1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"address\":\"Addres 1\",\n\t\"email\":\"niag@gmail.com\",\n\t\"phone\":\"+491234\"\n}\n"
+				},
+				"url": {
+					"raw": "http://localhost:8082/userapi/users/2/contact",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"userapi",
+						"users",
+						"2",
+						"contact"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "0333a1f2-8fb2-4444-95bd-70744461a48b",
+			"name": "http://localhost:8082/userapi/users/username/niag",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8082/userapi/users/username/niag",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"userapi",
+						"users",
+						"username",
+						"niag"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
