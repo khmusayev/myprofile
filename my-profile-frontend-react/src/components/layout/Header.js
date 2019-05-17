@@ -17,7 +17,7 @@ function Header() {
                         alt="Application Logo" />
             </Navbar.Brand>
             <Nav className="mr-auto" navbar>
-                <LinkContainer to="/">
+                <LinkContainer to="/login">
                     <NavLink>Login</NavLink>
                 </LinkContainer>
                 <LinkContainer to="/users/niag">
