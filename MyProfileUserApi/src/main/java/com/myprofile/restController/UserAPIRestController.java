@@ -9,28 +9,28 @@ import org.springframework.web.bind.annotation.*;
 import com.myprofile.entity.User;
 import com.myprofile.service.UserService;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin
 @RestController
 @RequestMapping("/userapi")
 public class UserAPIRestController {
-	
+
 	@Autowired
 	private UserService userService;
-	
+
 	@GetMapping("/users")
 	public List<User> findAll() {
 		return userService.findAll();
 	}
-	
+
 	@GetMapping("/users/{userId}")
 	public User getUser(@PathVariable int userId) {
-		
+
 		Optional<User> theUser = userService.findById((long) userId);
-		
-		if(!theUser.isPresent()) {
+
+		if (!theUser.isPresent()) {
 			throw new RuntimeException("User id not found - " + userId);
 		}
-		
+
 		return theUser.get();
 	}
 
@@ -38,12 +38,11 @@ public class UserAPIRestController {
 	public User getUser(@PathVariable String username) {
 
 		User theUser = userService.findByUsername(username);
-		if(theUser == null) {
+		if (theUser == null) {
 			throw new RuntimeException(String.format("User with username = %s not found.", username));
 		}
 		return theUser;
 	}
-
 
 	@PostMapping("/users")
 	public User addUser(@RequestBody User theUser) {
@@ -51,17 +50,28 @@ public class UserAPIRestController {
 		userService.save(theUser);
 		return theUser;
 	}
-	
+
+	@PostMapping("/login")
+	public User loginUser(@RequestBody User user) {
+		User theUser = userService.findByUsername(user.getUsername());
+		if (theUser == null) {
+			throw new RuntimeException(String.format("User with username = %s not found.", user.getUsername()));
+		}
+		if (!theUser.getPassword().equals(user.getPassword()))
+			throw new RuntimeException(String.format("Password does not match = %s not found.", user.getUsername()));
+		return theUser;
+	}
+
 	@PutMapping("/users")
 	public User updateUser(@RequestBody User theUser) {
 		userService.save(theUser);
 		return theUser;
 	}
-	
+
 	@DeleteMapping("/users/{userId}")
 	public String deleteUser(@PathVariable int userId) {
 		Optional<User> tempUser = userService.findById(userId);
-		if(!tempUser.isPresent()) {
+		if (!tempUser.isPresent()) {
 			throw new RuntimeException("User id not found - " + userId);
 		}
 		userService.delete(userId);

@@ -20,7 +20,7 @@ function Header() {
                 <LinkContainer to="/">
                     <NavLink>Login</NavLink>
                 </LinkContainer>
-                <LinkContainer to="/users/niag">
+                <LinkContainer to="/users/:username">
                     <NavLink>Home</NavLink>
                 </LinkContainer>
             </Nav>

@@ -17,6 +17,7 @@ class UserHomePage extends Component {
     }
 
     componentDidMount() {
+        console.log("inside UserHomePage.js")
         const {username} = this.props.match.params;
         axios.get(`${Constants.BASE_USER_URL}/username/${username}`)
         .then(res => {
